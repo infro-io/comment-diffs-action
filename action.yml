@@ -1,0 +1,23 @@
+name: Comment diffs
+description: Comment diffs
+inputs:
+  config:
+    description: The Infro config.
+    required: true
+  repo:
+    description: The current repository in the form "owner/repo".
+    required: true
+  revision:
+    description: The revision to perform the diff on.
+    required: true
+  pull-number:
+    description: The pull request to comment on.
+    required: true
+runs:
+  using: docker
+  image: infrolabs/infro-core
+  args:
+    - --config ${{ inputs.config }}
+    - --repo ${{ inputs.repo }}
+    - --revision ${{ inputs.revision }}
+    - --pull-number ${{ inputs.pull-number }}
