@@ -17,7 +17,11 @@ runs:
   using: docker
   image: docker://infrolabs/infro-core
   args:
-    - --config ${{ inputs.config }}
-    - --repo ${{ inputs.repo }}
-    - --revision ${{ inputs.revision }}
-    - --pull-number ${{ inputs.pull-number }}
+    - --repo
+    - ${{ inputs.repo }}
+    - --revision
+    - ${{ inputs.revision }}
+    - --pull-number
+    - ${{ inputs.pull-number }}
+    - --config
+    - ${{ inputs.config }}
