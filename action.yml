@@ -18,10 +18,10 @@ runs:
   image: docker://infrolabs/infro-core
   args:
     - --repo
-    - ${{ inputs.repo }}
+    - ${{ github.repository }}
     - --revision
-    - ${{ inputs.revision }}
+    - ${{ github.sha }}
     - --pull-number
-    - ${{ inputs.pull-number }}
+    - ${{ github.event.number }}
     - --config
     - ${{ inputs.config }}
