@@ -17,6 +17,7 @@ runs:
   using: docker
   image: docker://infrolabs/infro-core
   args:
+    - comment
     - --repo
     - ${{ inputs.repo }}
     - --revision
