@@ -15,7 +15,7 @@ inputs:
     required: true
 runs:
   using: docker
-  image: docker://infrolabs/infro-core
+  image: docker://infrolabs/infro-core@sha256:a7f6f529113fe52a4e896e66db94d402e6af6dcd7d6edf5cdd91b51bc9922d6c
   args:
     - comment
     - --repo
